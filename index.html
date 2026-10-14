@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare | Modern Health Services</title>
+    <!-- Linking external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="logo">Medi<span>Care</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctors">Our Doctors</a></li>
+            </ul>
+        </nav>
+        <button class="btn open-modal-btn">Book Appointment</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Health Is Our <span>Top Priority</span></h1>
+            <p>Access world-class healthcare services from certified medical specialists. Book an appointment today and experience seamless medical care.</p>
+            <button class="btn btn-secondary open-modal-btn">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Core Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Cardiology</h3>
+                <p>Comprehensive heart health checks, diagnostics, and customized treatment plans.</p>
+            </div>
+            <div class="service-card">
+                <h3>Pediatrics</h3>
+                <p>Specialized medical care, routine checkups, and vaccinations for children.</p>
+            </div>
+            <div class="service-card">
+                <h3>Neurology</h3>
+                <p>Advanced diagnostic procedures and management for complex nervous system conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Modal Structure -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Book a Medical Appointment</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="patientName">Full Name</label>
+                    <input type="text" id="patientName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="department">Select Department</label>
+                    <select id="department" required>
+                        <option value="">-- Choose a Department --</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Neurology">Neurology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Date</label>
+                    <input type="date" id="appointmentDate" required>
+                </div>
+                <button type="submit" class="btn submit-btn">Confirm Booking</button>
+            </form>
+            <div id="successMessage" class="hidden"></div>
+        </div>
+    </div>
+
+    <!-- Linking external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
